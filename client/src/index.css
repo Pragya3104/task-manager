@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Sans:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0e0c0a;
+  --bg2:      #141210;
+  --bg3:      #1c1917;
+  --border:   #2a2520;
+  --border2:  #3a3430;
+  --text1:    #f5f0e8;
+  --text2:    #a09080;
+  --text3:    #5a4f45;
+  --amber:    #f59e0b;
+  --amber2:   #d97706;
+  --amber-bg: rgba(245,158,11,0.08);
+  --red:      #ef4444;
+  --green:    #10b981;
+  --blue:     #60a5fa;
+  --mono:     'DM Mono', monospace;
+  --sans:     'Instrument Sans', sans-serif;
+}
+
+:root.light {
+  --bg:       #faf8f5;
+  --bg2:      #f3f0eb;
+  --bg3:      #ebe7e0;
+  --border:   #ddd9d0;
+  --border2:  #ccc7bc;
+  --text1:    #1c1814;
+  --text2:    #6b6055;
+  --text3:    #a89e92;
+  --amber:    #b45309;
+  --amber2:   #92400e;
+  --amber-bg: rgba(180,83,9,0.08);
+  --red:      #dc2626;
+  --green:    #059669;
+  --blue:     #2563eb;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background 0.2s, color 0.2s;
+}
+
+::selection { background: rgba(245,158,11,0.25); color: var(--text1); }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.4) sepia(1) saturate(2) hue-rotate(10deg); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up   { animation: fadeUp 0.35s ease forwards; }
+.fade-up-1 { animation: fadeUp 0.35s 0.05s ease both; }
+.fade-up-2 { animation: fadeUp 0.35s 0.10s ease both; }
+.fade-up-3 { animation: fadeUp 0.35s 0.15s ease both; }
+.fade-up-4 { animation: fadeUp 0.35s 0.20s ease both; }
+.fade-up-5 { animation: fadeUp 0.35s 0.25s ease both; }
