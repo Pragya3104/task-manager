@@ -5,7 +5,7 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
-import Layout from './components/layout/Layout'
+import Layout from './components/layout/layout'
 
 const PrivateRoute = ({ children }) => {
   const { token } = useAuthStore()
